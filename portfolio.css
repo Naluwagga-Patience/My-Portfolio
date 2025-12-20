@@ -1,6 +1,6 @@
 body{
-    color :black;
-background-image: url(backimg.jpg);
+    color :white ;
+background-color: black;
     font-family: Arial, sans-serif;
     
     
@@ -18,14 +18,15 @@ section{
 }
 .navbar
 {
-    color: #030d3f;
+    color: White ;
     overflow: hidden;
      text-align: center;
     justify-content: center;
 
 }
 
-nav ul {
+nav li a {
+      color: White ;
     display: flex;
     justify-content: center;
 
@@ -33,7 +34,7 @@ nav ul {
 .navbar a
 {
     float: left;
-    display: block;
+    display: flex;
     text-align: center;
     justify-content: center;
     padding: 14px 16px;
@@ -44,18 +45,27 @@ nav ul {
 {
     text-decoration: underline;
     
-    color: #22033f
+    color:#1e88e5
+}
+
+.navbar li a.active {
+    background-color: #1e88e5; /* blue for current page */
+    color: #ffffff;
 }
 ul li {
     list-style-type: none;
     margin: 5px 0;
     }
+
+
+
+
     .icons a {
         color : black;
     margin: 0 10px;
     }
     .icons a:hover {
-        color: #030d3f;
+        color: blue;
     }
     .section-title {
         text-align: center;
@@ -69,12 +79,84 @@ ul li {
 {
     display: flex;
     align-items: center;
-    margin-top: 20px;
-    font-size: 18px;
-    gap:30px
+    margin-left: 80px;
+    margin-top: 40px;
+    
+    gap:100px
 
 
 }
+
+
+
+.profile-pic {
+    border: 3px solid #27c6e2; /* blue border */
+    border-radius: 50%;
+}
+.welcome {
+    padding-bottom: 30px;
+
+    color: #27c6e2; /* blue color */
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Container & section title remain the same */
+.about-container {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #27c6e2;           /* blue heading */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #5ef11a; /* green underline accent */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Paragraphs */
+.about-container p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    line-height: 1.8;
+    margin-top: 15px;
+}
+
+/* Highlights */
+.highlight-blue {
+    color: #4bda09;
+    font-weight: bold;
+}
+
+.highlight-green {
+    color: #4bda09;
+    font-weight: bold;
+}
+
+/* Education */
+.education-title {
+    font-size: 1.8rem;
+    color: #4bda09;          /* green heading */
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.education-list {
+    list-style: none;
+    padding: 0;
+}
+
+.education-list li {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+
 
 .projects-container {
     display: flex;
@@ -95,8 +177,10 @@ ul li {
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  
+    box-shadow: 0 5px 15px rgba(30,136,229,0.7);
 }
+
 
 .project-img {
     width: 100%;
@@ -127,31 +211,7 @@ ul li {
 
 
 
-.contact-info {
-    margin: 20px 0;
-    font-size: 1.05rem;
-    color: #555;
-}
 
-.contact-info a {
-    color: #6c63ff;
-    text-decoration: none;
-}
-
-.icons {
-    margin: 20px 0;
-}
-
-.icons ion-icon {
-    font-size: 30px;
-    margin: 10px;
-    color: #6c63ff;
-    transition: color 0.3s;
-}
-
-.icons ion-icon:hover {
-    color: #111;
-}
 
 /* Contact Form */
 .contact-form {
@@ -174,7 +234,7 @@ ul li {
 
 .contact-form button {
     padding: 12px 20px;
-    background: #6c63ff;
+    background: #5ef11a;
     color: white;
     border: none;
     border-radius: 25px;
@@ -184,5 +244,53 @@ ul li {
 }
 
 .contact-form button:hover {
-    background: #5750d0;
+    background: #50d0ca;
+}
+
+
+/* Contact Section */
+#contact {
+    background-color: #000000;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Contact container */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contact items */
+.contact-item {
+    margin-bottom: 20px;
+}
+
+.contact-item span {
+    display: block;
+    color: #4bda09; /* green label */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+/* Icons */
+.contact-icons {
+    margin-top: 30px;
+}
+
+.contact-icons a {
+    color: #27c6e2; /* blue icons */
+    font-size: 35px;
+    margin: 0 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-icons a:hover {
+    color: #4bda09; /* green hover */
+    transform: scale(1.2);
 }
