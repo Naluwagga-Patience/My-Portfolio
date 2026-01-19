@@ -1,11 +1,15 @@
 body{
     color :white ;
-background-color: black;
+    background-color: black;
     font-family: Arial, sans-serif;
-    
-    
-
+    font-size: clamp(14px, 2.5vw, 16px);
+    line-height: 1.6;
 }
+html {
+    scroll-behavior: smooth;
+}
+
+
 section{
     height: auto;
 }
@@ -16,17 +20,32 @@ section{
     text-align: center;
     margin-top: 20px;
 }
+
 .navbar
 {
     color: White ;
     overflow: hidden;
-     text-align: center;
+    text-align: center;
     justify-content: center;
 
 }
 
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
 nav li a {
-      color: White ;
+    color: White ;
     display: flex;
     justify-content: center;
 
@@ -48,59 +67,115 @@ nav li a {
     color:#1e88e5
 }
 
+
 .navbar li a.active {
-    background-color: #1e88e5; /* blue for current page */
-    color: #ffffff;
+    background-color: #1e88e5;
 }
+
+
 ul li {
     list-style-type: none;
     margin: 5px 0;
     }
 
-
-
-
     .icons a {
         color : black;
     margin: 0 10px;
     }
+
     .icons a:hover {
         color: blue;
     }
+
     .section-title {
         text-align: center;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
     width: 80%;
-    
-}
+    height: auto;
+    }
+
 .intro
 {
     display: flex;
     align-items: center;
-    margin-left: 80px;
-    margin-top: 40px;
+    justify-content: center;
+    gap: 50px;
+    padding: 80px 10%;
+    flex-wrap: wrap;
+    padding:50px 8%;
     
-    gap:100px
-
-
 }
-
-
 
 .profile-pic {
-    border: 3px solid #27c6e2; /* blue border */
+    width:260px;
+    border: 4px solid #27c6e2; /* blue border */
     border-radius: 50%;
 }
+
+.home-text {
+    max-width: 500px;
+    color: white;
+}
+
+.home-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.name {
+    color: #27c6e2;
+}
+
+.role {
+    font-size: 1.4rem;
+    color: #4bda09;
+    margin-bottom: 15px;
+}
+
 .welcome {
     padding-bottom: 30px;
-
+line-height: 1.3;
     color: #27c6e2; /* blue color */
-    font-size: 32px;
+    font-size: 2.2rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
+
+.home-buttons {
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 12px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.primary {
+    background: #27c6e2;
+    color: black;
+}
+
+.secondary {
+    border: 2px solid #4bda09;
+    color: #4bda09;
+}
+
+.primary:hover {
+    background: #1aaac7;
+}
+
+.secondary:hover {
+    background: #4bda09;
+    color: black;
+}
+
 
 /* Container & section title remain the same */
 .about-container {
@@ -156,8 +231,6 @@ ul li {
     margin-bottom: 10px;
 }
 
-
-
 .projects-container {
     display: flex;
     flex-wrap: wrap;
@@ -177,10 +250,8 @@ ul li {
 
 .project-card:hover {
     transform: translateY(-5px);
-  
-    box-shadow: 0 5px 15px rgba(30,136,229,0.7);
+      box-shadow: 0 5px 15px rgba(30,136,229,0.7);
 }
-
 
 .project-img {
     width: 100%;
@@ -208,9 +279,6 @@ ul li {
     padding: 8px 20px;
     font-size: 0.9rem;
 }
-
-
-
 
 
 /* Contact Form */
@@ -293,4 +361,45 @@ ul li {
 .contact-icons a:hover {
     color: #4bda09; /* green hover */
     transform: scale(1.2);
+}
+/* Responsive Design */
+
+
+@media(max-width :600px){
+
+    body{
+        font-size: 14px;
+    }
+    h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }        
+ .profile-pic{
+            width: 180px;
+        }
+
+ .intro{
+            flex-direction: column;
+            text-align: center;
+                    }
+
+.menu-btn {
+    display: block;
+  }
+
+.navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    border-top: 1px solid #333;
+      }
+
+  .navbar ul.show {
+    display: flex;
+  }
+
 }
